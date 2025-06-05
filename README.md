@@ -15,7 +15,7 @@ Below is an example of the GameOfLife rules json file:
 	"populationValues": [3]
 }
 ```
-Cells will die when they have less than or equal to ```deathValues[0]``` neighbors, and more than or equal to ```deathValues[1]``` (so--as of now-- there can only be two death values).
+Cells will die when they have less than or equal to ```deathValues[0]``` neighbors, and more than or equal to ```deathValues[1]```.
 Cells will survive for the next iteration if the amount of neighbors they have equals any of the survivialValues. An empty cell will become populated if the amount of neighbors it has equals any of the population values.\
 Note that neighbors is equal to the 8 surrounding cells.
 
