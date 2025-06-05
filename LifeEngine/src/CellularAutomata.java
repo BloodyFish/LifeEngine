@@ -63,7 +63,7 @@ public class CellularAutomata  {
 	}
 	
 	/**
-	 * One call of this method is one iteration in the Game of Life
+	 * One call of this method is one iteration in the automata
 	 */
 	private static void iterate() {
 
@@ -81,9 +81,16 @@ public class CellularAutomata  {
                     	shadowCells[x][y] = new Cell(x,y);
                     	Color shadowColor = cells[x][y].color;
                     	shadowCells[x][y].color = new Color(shadowColor.getRed(),shadowColor.getGreen(), shadowColor.getBlue(), (int)(shadowColor.getAlpha() * 0.25));
-                    	
-                    	continue;
-                    	
+                    	                    	
+                    }
+                    if(Rules.rule.deathValues.length > 2) {
+                    	for(int i = 2; i < Rules.rule.deathValues.length; i++) {
+                    		if(neighbors.size() == Rules.rule.deathValues[i]) {
+                    			shadowCells[x][y] = new Cell(x,y);
+                            	Color shadowColor = cells[x][y].color;
+                            	shadowCells[x][y].color = new Color(shadowColor.getRed(),shadowColor.getGreen(), shadowColor.getBlue(), (int)(shadowColor.getAlpha() * 0.25));
+                    		}
+                    	}
                     }
  
                     // SUVIVIAL
