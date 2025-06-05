@@ -30,4 +30,6 @@ class RuleSet{
 	public int[] deathValues;
 	public int[] survivialValues;
 	public int[] populationValues;
+	public int neighborPadding;
 }
+
