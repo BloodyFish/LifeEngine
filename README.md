@@ -1,4 +1,4 @@
-# Life Engine: The Cellular Automata Engine
+# 🧬 Life Engine: The Cellular Automata Engine
 An easy to use, java based program for creating your own cellular automata
 
 If you run the program, the default rules are those of Conway's Game of Life.\
